@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'category',
+    'accounts',
+    'store',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +71,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'greatKart.wsgi.application'
+
+AUTH_USER_MODEL = 'accounts.Account'
 
 
 # Database
@@ -120,6 +125,9 @@ STATIC_ROOT = BASE_DIR /'static'
 STATICFILES_DIRS = [
     'greatKart/static',
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
